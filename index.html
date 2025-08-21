@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Coworking San Martín de los Andes - Tu espacio de trabajo en Patagonia
+    </title>
+    <meta
+      name="description"
+      content="Espacios de coworking, oficinas privadas y guardado de equipaje en San Martín de los Andes. El lugar perfecto para trabajar rodeado de naturaleza."
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Tu espacio de trabajo en el corazón de la Patagonia
+        </h1>
+        <p class="hero-description">
+          Descubre el equilibrio perfecto entre productividad y naturaleza en
+          San Martín de los Andes
+        </p>
+        <button class="cta-button" onclick="scrollToSection('about')">
+          Descubre más
+        </button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">Sobre nosotros</h2>
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="about-text">
+              En Coworking San Martín, creemos que el mejor trabajo surge cuando
+              te sientes inspirado. Ubicados en el corazón de la Patagonia
+              argentina, ofrecemos espacios de trabajo modernos y funcionales
+              con las mejores vistas de los Andes.
+            </p>
+            <p class="about-text">
+              Nuestra misión es crear una comunidad de profesionales,
+              emprendedores y creativos que buscan un ambiente colaborativo
+              único, donde la naturaleza se convierte en tu compañera de trabajo
+              diaria.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Profesionales activos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Acceso flexible</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Fibra óptica</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2 class="section-title">Nuestros servicios</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3 class="service-title">Coworking</h3>
+            <p class="service-description">
+              Espacios compartidos diseñados para maximizar tu productividad en
+              un ambiente colaborativo y profesional.
+            </p>
+            <button
+              class="service-cta-button"
+              onclick="navigateTo('coworking.html')"
+            >
+              Más información
+            </button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3 class="service-title">Sala Privada</h3>
+            <p class="service-description">
+              Oficinas privadas completamente equipadas para equipos que
+              necesitan privacidad y concentración total.
+            </p>
+            <button
+              class="service-cta-button"
+              onclick="navigateTo('sala-privada.html')"
+            >
+              Más información
+            </button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎒</div>
+            <h3 class="service-title">Luggage Storage</h3>
+            <p class="service-description">
+              Guarda tus pertenencias de forma segura mientras exploras San
+              Martín de los Andes o trabajas sin cargas.
+            </p>
+            <a class="service-cta-button" href="./pages/luggage-storage.html">
+              Más información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Contáctanos</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="contact-title">¿Listo para comenzar?</h3>
+            <p class="contact-description">
+              Estamos aquí para ayudarte a encontrar el espacio perfecto para tu
+              trabajo. Contáctanos y descubre cómo podemos potenciar tu
+              productividad.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>San Martín de los Andes, Neuquén</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <span>+54 2972 123456</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <span>hola@coworkingsanmartin.com</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4 class="footer-title">Coworking San Martín</h4>
+            <p class="footer-text">
+              Tu espacio de trabajo en el corazón de la Patagonia
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title">Contacto</h4>
+            <p class="footer-text">San Martín de los Andes, Neuquén</p>
+            <p class="footer-text">+54 2972 123456</p>
+            <p class="footer-text">hola@coworkingsanmartin.com</p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title">Síguenos</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
