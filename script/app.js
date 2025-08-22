@@ -12,8 +12,6 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
-
-// Mobile menu toggle
 function toggleMenu() {
   if (menu && overlay && hamburger) {
     menu.classList.toggle("active");
@@ -22,12 +20,24 @@ function toggleMenu() {
   }
 }
 
-if (hamburger) hamburger.addEventListener("click", toggleMenu);
-if (overlay) overlay.addEventListener("click", toggleMenu);
+// Función cerrar
+function closeMenu() {
+  if (menu && overlay && hamburger) {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+}
 
-// Cerrar menú si se hace click en un link
+// Abrir/cerrar con el botón hamburguesa
+if (hamburger) hamburger.addEventListener("click", toggleMenu);
+
+// Cerrar si se hace click en overlay
+if (overlay) overlay.addEventListener("click", closeMenu);
+
+// Cerrar si se hace click en un link
 document.querySelectorAll(".menu a").forEach((link) => {
-  link.addEventListener("click", toggleMenu);
+  link.addEventListener("click", closeMenu);
 });
 
 // Details toggle (solo si existen)

@@ -8,8 +8,8 @@
       name="description"
       content="Espacios de coworking, oficinas privadas y guardado de equipaje en San Martín de los Andes. El lugar perfecto para trabajar rodeado de naturaleza."
     />
-    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="shortcut icon" href="./public/logo-bg.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/wpw4rrh.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,17 +25,17 @@
       <nav id="navbar">
         <div class="logo">
           <img
-            src="/public/logo.png"
+            src="./public/logo-bg.png"
             class="logo-image"
             alt="ave volando con montaña atras"
           />
           <h3 class="merriweather-family">VULTUR</h3>
         </div>
         <div class="menu" id="menu">
-          <a href="#">Inicio</a>
-          <a href="#">Servicios</a>
-          <a href="#">Proyectos</a>
-          <a href="#">Contacto</a>
+          <a href="#hero">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
         </div>
         <div class="hamburger" id="hamburger">
           <span></span>
@@ -48,7 +48,7 @@
       <div class="overlay" id="overlay"></div>
     </header>
     <main>
-      <section class="hero-section">
+      <section class="hero-section" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1 class="hero-title">
@@ -62,7 +62,7 @@
         </div>
       </section>
 
-      <section class="nosotros">
+      <section class="nosotros" id="nosotros">
         <div class="nosotros-content">
           <h2>Nosotros</h2>
           <p>
@@ -110,13 +110,13 @@
         </div>
       </section>
 
-      <section class="services-section">
+      <section class="services-section" id="servicios">
         <div class="container">
           <h2 class="section-title">Nuestros servicios</h2>
           <section class="services-grid">
             <!-- Coworking -->
             <article class="service-card">
-              <a href="#">
+              <a href="./pages/coworking.html">
                 <div class="service-icon" data-lucide="users"></div>
                 <h3 class="service-title">Espacio de Coworking</h3>
                 <p class="service-description">
@@ -133,7 +133,7 @@
 
             <!-- Sala Privada -->
             <article class="service-card">
-              <a href="/pages/sala-privada.html">
+              <a href="./pages/sala-privada.html">
                 <div class="service-icon" data-lucide="briefcase"></div>
                 <h3 class="service-title">Sala Privada</h3>
                 <p class="service-description">
@@ -150,7 +150,7 @@
 
             <!-- Lockers -->
             <article class="service-card">
-              <a href="#">
+              <a href="./pages/luggage-storage.html">
                 <div class="service-icon" data-lucide="package"></div>
                 <h3 class="service-title">Lockers</h3>
                 <p class="service-description">
@@ -205,7 +205,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="contact-section">
+      <section class="contact-section" id="contacto">
         <div class="contact-container">
           <h2>📬 Contactanos</h2>
           <p class="subtitle">
@@ -246,9 +246,20 @@
         </div>
       </section>
     </main>
-    <!-- Hero Section -->
-
-    <!-- Footer -->
+    <a
+      href="https://wa.me/5492972123456"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chatear por WhatsApp"
+    >
+      <!-- WhatsApp logo (SVG) -->
+      <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-icon">
+        <path
+          d="M19.11 17.47c-.28-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.28-.7.89-.86 1.07-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.37-1.63-1.53-1.9-.16-.28-.02-.43.12-.57.12-.12.28-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.28-.96.93-.96 2.27 0 1.34.99 2.64 1.13 2.82.14.18 1.95 2.97 4.74 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.62-.66 1.85-1.31.23-.64.23-1.19.16-1.31-.07-.11-.25-.18-.53-.32zM16.02 3.2c-7.11 0-12.86 5.74-12.86 12.84 0 2.26.59 4.38 1.62 6.21L3.2 28.8l6.75-1.77a12.78 12.78 0 0 0 6.07 1.55c7.1 0 12.84-5.75 12.84-12.86 0-7.1-5.74-12.84-12.84-12.84zm0 23.3c-1.98 0-3.83-.52-5.44-1.42l-.39-.22-4 .94.85-3.89-.25-.4a10.61 10.61 0 0 1-1.6-5.57c0-5.87 4.77-10.64 10.64-10.64 5.86 0 10.63 4.77 10.63 10.64 0 5.87-4.77 10.56-10.63 10.56z"
+        />
+      </svg>
+    </a>
     <footer class="footer">
       <div class="footer-pattern"></div>
       <div class="container">
@@ -295,7 +306,7 @@
       </div>
     </footer>
 
-    <script src="/script/app.js"></script>
+    <script src="./script/app.js"></script>
     <script>
       lucide.createIcons();
     </script>
