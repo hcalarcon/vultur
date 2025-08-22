@@ -8,9 +8,34 @@
       name="description"
       content="Oficinas privadas completamente equipadas en San Martín de los Andes. Privacidad total para tu equipo de trabajo."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
+    <header>
+      <nav id="navbar">
+        <div class="logo">
+          <img
+            src="/public/logo.png"
+            class="logo-image"
+            alt="ave volando con montaña atras"
+          />
+          <h3 class="merriweather-family">VULTUR</h3>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <a href="#">Proyectos</a>
+          <a href="#">Contacto</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
     <!-- Hero Section -->
     <section class="page-hero sala-privada-hero">
       <div class="page-hero-content">
@@ -136,7 +161,55 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="footer-pattern"></div>
+      <div class="container">
+        <div class="footer-content">
+          <!-- Logo + Nombre + Frase -->
+          <div class="footer-section footer-brand">
+            <img src="../public/logo.png" alt="Logo" class="footer-logo" />
+            <h4 class="footer-title">Coworking San Martín</h4>
+            <p class="footer-text">
+              Tu espacio de trabajo en el corazón de la Patagonia
+            </p>
+          </div>
 
-    <script src="script.js"></script>
+          <!-- Contacto -->
+          <div class="footer-section">
+            <h4 class="footer-title">Contacto</h4>
+            <p class="footer-text">San Martín de los Andes, Neuquén</p>
+            <p class="footer-text">+54 2972 123456</p>
+            <p class="footer-text">hola@coworkingsanmartin.com</p>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-section">
+            <h4 class="footer-title">Síguenos</h4>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i data-lucide="facebook"></i> Facebook</a
+              >
+              <a href="#" class="social-link"
+                ><i data-lucide="instagram"></i> Instagram</a
+              >
+              <a href="#" class="social-link"
+                ><i data-lucide="linkedin"></i> LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script/app.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

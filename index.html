@@ -3,193 +3,290 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Coworking San Martín de los Andes - Tu espacio de trabajo en Patagonia
-    </title>
+    <title>Vultur Cowork - San Martín de los Andes</title>
     <meta
       name="description"
       content="Espacios de coworking, oficinas privadas y guardado de equipaje en San Martín de los Andes. El lugar perfecto para trabajar rodeado de naturaleza."
     />
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/wpw4rrh.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Tu espacio de trabajo en el corazón de la Patagonia
-        </h1>
-        <p class="hero-description">
-          Descubre el equilibrio perfecto entre productividad y naturaleza en
-          San Martín de los Andes
-        </p>
-        <button class="cta-button" onclick="scrollToSection('about')">
-          Descubre más
-        </button>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-      <div class="container">
-        <h2 class="section-title">Sobre nosotros</h2>
-        <div class="about-grid">
-          <div class="about-content">
-            <p class="about-text">
-              En Coworking San Martín, creemos que el mejor trabajo surge cuando
-              te sientes inspirado. Ubicados en el corazón de la Patagonia
-              argentina, ofrecemos espacios de trabajo modernos y funcionales
-              con las mejores vistas de los Andes.
-            </p>
-            <p class="about-text">
-              Nuestra misión es crear una comunidad de profesionales,
-              emprendedores y creativos que buscan un ambiente colaborativo
-              único, donde la naturaleza se convierte en tu compañera de trabajo
-              diaria.
-            </p>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Profesionales activos</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Acceso flexible</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Fibra óptica</div>
-            </div>
-          </div>
+    <header>
+      <nav id="navbar">
+        <div class="logo">
+          <img
+            src="/public/logo.png"
+            class="logo-image"
+            alt="ave volando con montaña atras"
+          />
+          <h3 class="merriweather-family">VULTUR</h3>
         </div>
-      </div>
-    </section>
+        <div class="menu" id="menu">
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <a href="#">Proyectos</a>
+          <a href="#">Contacto</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
 
-    <!-- Services Section -->
-    <section class="services-section">
-      <div class="container">
-        <h2 class="section-title">Nuestros servicios</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3 class="service-title">Coworking</h3>
-            <p class="service-description">
-              Espacios compartidos diseñados para maximizar tu productividad en
-              un ambiente colaborativo y profesional.
-            </p>
-            <button
-              class="service-cta-button"
-              onclick="navigateTo('coworking.html')"
-            >
-              Más información
-            </button>
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Tu espacio de trabajo en el corazón de la Patagonia
+          </h1>
+          <p class="hero-description">
+            Descubre el equilibrio perfecto entre productividad y naturaleza en
+            San Martín de los Andes
+          </p>
+          <a class="cta-button"> Descubre más </a>
+        </div>
+      </section>
+
+      <section class="nosotros">
+        <div class="nosotros-content">
+          <h2>Nosotros</h2>
+          <p>
+            Vultur Cowork nació con el sueño de crear un espacio único en San
+            Martín de los Andes. Tras años de aprendizajes y cambios de rumbo,
+            encontramos la verdadera necesidad: un lugar que combine comodidad,
+            comunidad y profesionalismo para quienes trabajan de forma remota.
+          </p>
+
+          <details class="custom-details">
+            <summary><span>Ver más</span></summary>
+            <div class="details-content">
+              <p>
+                Queríamos tener algo propio y al principio, nuestra idea era
+                abrir la primera cafetería de especialidad en San Martín de los
+                Andes. En aquel entonces vivíamos en Brasil, pero pensábamos
+                regresar al pueblo pronto.
+              </p>
+              <p>
+                Sin embargo, después de la pandemia ya habían abierto varias
+                cafeterías en la ciudad, y comprendimos que ese camino sería más
+                difícil. Fue entonces cuando, a partir de la experiencia de
+                Matías trabajando en Buenos Aires y usando espacios de
+                coworking, descubrimos una nueva necesidad: en San Martín no
+                existía un lugar que combinara comodidad, profesionalismo y
+                comunidad para quienes trabajan de forma remota.
+              </p>
+              <p>
+                Así, en febrero de 2025 comenzamos con el proyecto y, tras meses
+                de inversión, planificación y mucho trabajo, abrimos nuestras
+                puertas a fines de mayo.
+              </p>
+              <p>
+                Nuestro diferencial está en los detalles: un espacio pensado
+                para inspirar y concentrarse, acompañado de café filtrado que
+                molemos en el día, porque creemos que trabajar bien también
+                significa disfrutar de los pequeños momentos.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="nosotros-image">
+          <img src="./public/about.png" alt="Espacio de Vultur Cowork" />
+        </div>
+      </section>
+
+      <section class="services-section">
+        <div class="container">
+          <h2 class="section-title">Nuestros servicios</h2>
+          <section class="services-grid">
+            <!-- Coworking -->
+            <article class="service-card">
+              <a href="#">
+                <div class="service-icon" data-lucide="users"></div>
+                <h3 class="service-title">Espacio de Coworking</h3>
+                <p class="service-description">
+                  Diseñado para la concentración y la creatividad, con
+                  escritorios y mesas.
+                </p>
+                <ul class="features">
+                  <li><i data-lucide="coffee"></i> Café filtrado y té</li>
+                  <li><i data-lucide="monitor"></i> Espacios con enchufes</li>
+                  <li><i data-lucide="heart"></i> Sillones cómodos</li>
+                </ul>
+              </a>
+            </article>
+
+            <!-- Sala Privada -->
+            <article class="service-card">
+              <a href="/pages/sala-privada.html">
+                <div class="service-icon" data-lucide="briefcase"></div>
+                <h3 class="service-title">Sala Privada</h3>
+                <p class="service-description">
+                  Un espacio exclusivo cualquier evento con privacidad
+                  garantizada.
+                </p>
+                <ul class="features">
+                  <li><i data-lucide="users"></i> Capacidad adaptable</li>
+                  <li><i data-lucide="lock"></i> Privacidad</li>
+                  <li><i data-lucide="wifi"></i> WiFi rápido</li>
+                </ul>
+              </a>
+            </article>
+
+            <!-- Lockers -->
+            <article class="service-card">
+              <a href="#">
+                <div class="service-icon" data-lucide="package"></div>
+                <h3 class="service-title">Lockers</h3>
+                <p class="service-description">
+                  Guardado seguro, pensado para turistas que quieren disfrutar
+                  sin cargar con su equipaje.
+                </p>
+                <ul class="features">
+                  <li><i data-lucide="check-circle"></i> Seguro</li>
+                  <li><i data-lucide="clock"></i> Acceso flexible</li>
+                  <li><i data-lucide="map-pin"></i> Céntrico</li>
+                </ul>
+              </a>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="map-container">
+          <!-- Mapa -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3049.34!2d-71.3542!3d-40.1569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110f29d04d8c2b%3A0x1a4b4c39435dbf5d!2sVultur%20Cowork!5e0!3m2!1ses-419!2sar!4v0"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+
+          <!-- Ping animado -->
+          <div class="map-marker">
+            <div class="ping"></div>
+            <div class="dot"></div>
           </div>
-          <div class="service-card">
-            <div class="service-icon">🏢</div>
-            <h3 class="service-title">Sala Privada</h3>
-            <p class="service-description">
-              Oficinas privadas completamente equipadas para equipos que
-              necesitan privacidad y concentración total.
-            </p>
-            <button
-              class="service-cta-button"
-              onclick="navigateTo('sala-privada.html')"
+
+          <!-- Overlay card -->
+          <div class="location-card">
+            <h2>📍 Vultur Cowork</h2>
+            <p>Belgrano 845 Local 4, San Martín de los Andes</p>
+            <p><strong>Horarios:</strong> Lun - Vie 9:00 a 18:00</p>
+            <a
+              href="https://maps.app.goo.gl/kPY1dLgBhLE3N1qf7"
+              target="_blank"
+              class="btn-location"
             >
-              Más información
-            </button>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">🎒</div>
-            <h3 class="service-title">Luggage Storage</h3>
-            <p class="service-description">
-              Guarda tus pertenencias de forma segura mientras exploras San
-              Martín de los Andes o trabajas sin cargas.
-            </p>
-            <a class="service-cta-button" href="./pages/luggage-storage.html">
-              Más información
+              Cómo llegar
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Contáctanos</h2>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3 class="contact-title">¿Listo para comenzar?</h3>
-            <p class="contact-description">
-              Estamos aquí para ayudarte a encontrar el espacio perfecto para tu
-              trabajo. Contáctanos y descubre cómo podemos potenciar tu
-              productividad.
-            </p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <span>San Martín de los Andes, Neuquén</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">📞</span>
-                <span>+54 2972 123456</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">✉️</span>
-                <span>hola@coworkingsanmartin.com</span>
-              </div>
-            </div>
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="contact-container">
+          <h2>📬 Contactanos</h2>
+          <p class="subtitle">
+            Podés escribirnos rápido o usar los enlaces directos.
+          </p>
+
+          <div class="contact-cards">
+            <a href="mailto:info@vulturcowork.com" class="contact-card">
+              <i data-lucide="mail"></i>
+              <span>Email</span>
+            </a>
+            <a
+              href="https://wa.me/5492991234567"
+              target="_blank"
+              class="contact-card"
+            >
+              <i data-lucide="smartphone"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="tel:+5492991234567" class="contact-card">
+              <i data-lucide="phone-call"></i>
+              <span>Llamada</span>
+            </a>
           </div>
-          <form class="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Mensaje</label>
+
+          <div class="contact-form-wrapper">
+            <form class="contact-form">
+              <input type="text" name="name" placeholder="Tu nombre" required />
               <textarea
-                id="message"
                 name="message"
+                placeholder="Escribinos tu mensaje..."
                 rows="4"
                 required
               ></textarea>
-            </div>
-            <button type="submit" class="submit-button">Enviar mensaje</button>
-          </form>
+              <button type="submit">Enviar 💌</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+    <!-- Hero Section -->
 
     <!-- Footer -->
     <footer class="footer">
+      <div class="footer-pattern"></div>
       <div class="container">
         <div class="footer-content">
-          <div class="footer-section">
+          <!-- Logo + Nombre + Frase -->
+          <div class="footer-section footer-brand">
+            <img src="./public/logo.png" alt="Logo" class="footer-logo" />
             <h4 class="footer-title">Coworking San Martín</h4>
             <p class="footer-text">
               Tu espacio de trabajo en el corazón de la Patagonia
             </p>
           </div>
+
+          <!-- Contacto -->
           <div class="footer-section">
             <h4 class="footer-title">Contacto</h4>
             <p class="footer-text">San Martín de los Andes, Neuquén</p>
             <p class="footer-text">+54 2972 123456</p>
             <p class="footer-text">hola@coworkingsanmartin.com</p>
           </div>
+
+          <!-- Redes sociales -->
           <div class="footer-section">
             <h4 class="footer-title">Síguenos</h4>
             <div class="social-links">
-              <a href="#" class="social-link">Facebook</a>
-              <a href="#" class="social-link">Instagram</a>
-              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link"
+                ><i data-lucide="facebook"></i> Facebook</a
+              >
+              <a href="#" class="social-link"
+                ><i data-lucide="instagram"></i> Instagram</a
+              >
+              <a href="#" class="social-link"
+                ><i data-lucide="linkedin"></i> LinkedIn</a
+              >
             </div>
           </div>
         </div>
+
         <div class="footer-bottom">
           <p>
             &copy; 2024 Coworking San Martín. Todos los derechos reservados.
@@ -198,6 +295,9 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script/app.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
