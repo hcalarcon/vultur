@@ -1,4 +1,4 @@
-import { initNavbar } from "./modules/navBar/app.js";
+import { initNavbar } from "/vultur/modules/navBar/app.js";
 const slides = document.querySelectorAll(".carousel-slide");
 const dotsContainer = document.querySelector(".carousel-dots");
 
