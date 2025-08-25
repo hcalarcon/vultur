@@ -3,52 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coworking - Coworking San Martín de los Andes</title>
+    <title>Vulter Cowork - Coworking</title>
     <meta
       name="description"
       content="Espacios de coworking compartidos en San Martín de los Andes. WiFi de alta velocidad, café premium y ambiente colaborativo."
     />
     <link rel="stylesheet" href="../style/style.css" />
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <div class="logo">
-          <img
-            src="/public/logo.png"
-            class="logo-image"
-            alt="ave volando con montaña atras"
-          />
-          <h3 class="merriweather-family">VULTUR</h3>
-        </div>
-        <div class="menu" id="menu">
-          <a href="../index.html#home">Inicio</a>
-          <a href="../index.html#nosotros">Nosotros</a>
-          <a href="../index.html#servicios">Servicios</a>
-          <a href="../index.html#contacto">Contacto</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </header>
+    <div id="navbar-container"></div>
     <main>
-      <section class="page-hero">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title">Coworking</h1>
-          <p class="page-hero-description">
-            Tu espacio de trabajo ideal en el corazón de San Martín de los Andes
-          </p>
+      <section class="hero-carousel">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-slide active"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/cowork-1.jpg') no-repeat center center/cover;
+          "
+        >
+          >
+          <div class="carousel-overlay">
+            <h2>Tu frase inspiradora</h2>
+            <a href="#contacto" class="btn">Contáctanos</a>
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-slide"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/cowork-3.jpeg') no-repeat center center/cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <h2>Otro mensaje</h2>
+            <a href="#about" class="btn">Saber más</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-slide"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/cowork.jpg') no-repeat center center/cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <h2>Más contenido</h2>
+            <a href="#servicios" class="btn">Ver servicios</a>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div
+          class="carousel-slide"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/privada-4.jpeg') no-repeat center center/cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <h2>Última frase</h2>
+            <a href="#galeria" class="btn">Galería</a>
+          </div>
+        </div>
+
+        <div class="carousel-dots"></div>
       </section>
 
       <!-- Content Section -->
       <section class="page-content">
         <div class="container">
-          <a href="index.html" class="back-link">← Volver al inicio</a>
-
           <div class="content-grid">
             <div class="content-main">
               <h2 class="content-title">
@@ -105,35 +148,6 @@
           </div>
 
           <!-- Pricing Section -->
-          <div class="pricing-section">
-            <h3 class="pricing-title">Planes y Tarifas</h3>
-            <div class="pricing-grid">
-              <div class="pricing-card">
-                <h4 class="pricing-plan">Día Completo</h4>
-                <p class="pricing-price">$3.500</p>
-                <p class="pricing-period">Acceso por día (7:00 - 22:00)</p>
-                <p class="pricing-includes">
-                  Incluye café, WiFi y uso de salas comunes
-                </p>
-              </div>
-              <div class="pricing-card featured">
-                <h4 class="pricing-plan">Semanal</h4>
-                <p class="pricing-price">$18.000</p>
-                <p class="pricing-period">5 días de acceso</p>
-                <p class="pricing-includes">
-                  Incluye 2 horas de sala de reuniones
-                </p>
-              </div>
-              <div class="pricing-card">
-                <h4 class="pricing-plan">Mensual</h4>
-                <p class="pricing-price">$65.000</p>
-                <p class="pricing-period">Acceso ilimitado mensual</p>
-                <p class="pricing-includes">
-                  Incluye casillero personal y 8 hs de salas
-                </p>
-              </div>
-            </div>
-          </div>
 
           <!-- CTA Section -->
           <div class="page-cta">
@@ -147,65 +161,91 @@
                 class="cta-button primary"
                 onclick="alert('Funcionalidad de reserva próximamente')"
               >
-                Reservar ahora
-              </button>
-              <button
-                class="cta-button secondary"
-                onclick="alert('Contacta con nosotros para agendar una visita')"
-              >
-                Agendar visita
+                Consulta ahora
               </button>
             </div>
           </div>
+          <section class="gallery-section">
+            <h2>Galería</h2>
+
+            <div class="gallery-grid">
+              <img
+                src="/public/privada-1.jpg"
+                alt="Imagen 1"
+                onclick="openModal(this)"
+              />
+              <img
+                src="/public/privada-2.jpg"
+                alt="Imagen 2"
+                onclick="openModal(this)"
+              />
+              <img
+                src="/public/privada-3.jpg"
+                alt="Imagen 3"
+                onclick="openModal(this)"
+              />
+              <img src="/public/privada-4.jpeg" alt="Imagen 4" rid-area: 2 / 1 /
+              3 / 2; " onclick="openModal(this)" />
+              <img
+                src="/public/privada-5.jpeg"
+                alt="Imagen 5"
+                onclick="openModal(this)"
+              />
+              <img
+                src="/public/privada-6.jpeg"
+                alt="Imagen 6"
+                onclick="openModal(this)"
+              />
+            </div>
+
+            <!-- Modal -->
+            <div
+              id="modal"
+              style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+              "
+              onclick="closeModal()"
+            >
+              <img
+                id="modal-img"
+                src=""
+                style="
+                  max-width: 90%;
+                  max-height: 90%;
+                  border-radius: 0.8rem;
+                  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+                "
+              />
+            </div>
+          </section>
         </div>
       </section>
+      <a
+        href="https://wa.me/5492972123456"
+        class="whatsapp-fab"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chatear por WhatsApp"
+      >
+        <!-- WhatsApp logo (SVG) -->
+        <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-icon">
+          <path
+            d="M19.11 17.47c-.28-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.28-.7.89-.86 1.07-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.37-1.63-1.53-1.9-.16-.28-.02-.43.12-.57.12-.12.28-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.28-.96.93-.96 2.27 0 1.34.99 2.64 1.13 2.82.14.18 1.95 2.97 4.74 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.62-.66 1.85-1.31.23-.64.23-1.19.16-1.31-.07-.11-.25-.18-.53-.32zM16.02 3.2c-7.11 0-12.86 5.74-12.86 12.84 0 2.26.59 4.38 1.62 6.21L3.2 28.8l6.75-1.77a12.78 12.78 0 0 0 6.07 1.55c7.1 0 12.84-5.75 12.84-12.86 0-7.1-5.74-12.84-12.84-12.84zm0 23.3c-1.98 0-3.83-.52-5.44-1.42l-.39-.22-4 .94.85-3.89-.25-.4a10.61 10.61 0 0 1-1.6-5.57c0-5.87 4.77-10.64 10.64-10.64 5.86 0 10.63 4.77 10.63 10.64 0 5.87-4.77 10.56-10.63 10.56z"
+          />
+        </svg>
+      </a>
     </main>
-    <footer class="footer">
-      <div class="footer-pattern"></div>
-      <div class="container">
-        <div class="footer-content">
-          <!-- Logo + Nombre + Frase -->
-          <div class="footer-section footer-brand">
-            <img src="./public/logo.png" alt="Logo" class="footer-logo" />
-            <h4 class="footer-title">Coworking San Martín</h4>
-            <p class="footer-text">
-              Tu espacio de trabajo en el corazón de la Patagonia
-            </p>
-          </div>
+    <div id="footer-container"></div>
 
-          <!-- Contacto -->
-          <div class="footer-section">
-            <h4 class="footer-title">Contacto</h4>
-            <p class="footer-text">San Martín de los Andes, Neuquén</p>
-            <p class="footer-text">+54 2972 123456</p>
-            <p class="footer-text">hola@coworkingsanmartin.com</p>
-          </div>
-
-          <!-- Redes sociales -->
-          <div class="footer-section">
-            <h4 class="footer-title">Síguenos</h4>
-            <div class="social-links">
-              <a href="#" class="social-link"
-                ><i data-lucide="facebook"></i> Facebook</a
-              >
-              <a href="#" class="social-link"
-                ><i data-lucide="instagram"></i> Instagram</a
-              >
-              <a href="#" class="social-link"
-                ><i data-lucide="linkedin"></i> LinkedIn</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="../script/app.js"></script>
+    <script type="module" src="../script/app.js"></script>
   </body>
 </html>

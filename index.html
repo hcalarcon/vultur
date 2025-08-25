@@ -21,32 +21,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <div class="logo">
-          <img
-            src="./public/logo-bg.png"
-            class="logo-image"
-            alt="ave volando con montaña atras"
-          />
-          <h3 class="merriweather-family">VULTUR</h3>
-        </div>
-        <div class="menu" id="menu">
-          <a href="#hero">Inicio</a>
-          <a href="#nosotros">Nosotros</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-
-      <!-- Overlay -->
-      <div class="overlay" id="overlay"></div>
-    </header>
+    <div id="navbar-container"></div>
     <main>
       <section class="hero-section" id="hero">
         <div class="hero-overlay"></div>
@@ -58,7 +33,7 @@
             Descubre el equilibrio perfecto entre productividad y naturaleza en
             San Martín de los Andes
           </p>
-          <a class="cta-button"> Descubre más </a>
+          <a href="#servicios" class="cta-button"> Descubre más </a>
         </div>
       </section>
 
@@ -240,7 +215,7 @@
                 rows="4"
                 required
               ></textarea>
-              <button type="submit">Enviar 💌</button>
+              <button type="submit">Enviar</button>
             </form>
           </div>
         </div>
@@ -260,53 +235,9 @@
         />
       </svg>
     </a>
-    <footer class="footer">
-      <div class="footer-pattern"></div>
-      <div class="container">
-        <div class="footer-content">
-          <!-- Logo + Nombre + Frase -->
-          <div class="footer-section footer-brand">
-            <img src="./public/logo.png" alt="Logo" class="footer-logo" />
-            <h4 class="footer-title">Coworking San Martín</h4>
-            <p class="footer-text">
-              Tu espacio de trabajo en el corazón de la Patagonia
-            </p>
-          </div>
+    <div id="footer-container"></div>
 
-          <!-- Contacto -->
-          <div class="footer-section">
-            <h4 class="footer-title">Contacto</h4>
-            <p class="footer-text">San Martín de los Andes, Neuquén</p>
-            <p class="footer-text">+54 2972 123456</p>
-            <p class="footer-text">hola@coworkingsanmartin.com</p>
-          </div>
-
-          <!-- Redes sociales -->
-          <div class="footer-section">
-            <h4 class="footer-title">Síguenos</h4>
-            <div class="social-links">
-              <a href="#" class="social-link"
-                ><i data-lucide="facebook"></i> Facebook</a
-              >
-              <a href="#" class="social-link"
-                ><i data-lucide="instagram"></i> Instagram</a
-              >
-              <a href="#" class="social-link"
-                ><i data-lucide="linkedin"></i> LinkedIn</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="./script/app.js"></script>
+    <script type="module" src="./script/app.js"></script>
     <script>
       lucide.createIcons();
     </script>

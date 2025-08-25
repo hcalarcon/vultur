@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sala Privada - Coworking San Martín de los Andes</title>
+    <title>Sala Privada - Vultur San Martín de los Andes</title>
     <meta
       name="description"
       content="Oficinas privadas completamente equipadas en San Martín de los Andes. Privacidad total para tu equipo de trabajo."
@@ -11,124 +11,170 @@
     <link rel="stylesheet" href="../style/style.css" />
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <div class="logo">
-          <img
-            src="/public/logo.png"
-            class="logo-image"
-            alt="ave volando con montaña atras"
-          />
-          <h3 class="merriweather-family">VULTUR</h3>
-        </div>
-        <div class="menu" id="menu">
-          <a href="../index.html#home">Inicio</a>
-          <a href="../index.html#nosotros">Nosotros</a>
-          <a href="../index.html#servicios">Servicios</a>
-          <a href="../index.html#contacto">Contacto</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </header>
+    <div id="navbar-container"></div>
     <main>
       <!-- Hero Section -->
-      <section class="page-hero sala-privada-hero">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title">Sala Privada</h1>
-          <p class="page-hero-description">
-            Tu oficina privada en el corazón de la Patagonia
-          </p>
+      <section class="hero-carousel">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-slide active"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/lugagge-6.jpg') no-repeat center center/cover;
+          "
+        >
+          >
+          <div class="carousel-overlay">
+            <h2>Tu frase inspiradora</h2>
+            <a href="#contacto" class="btn">Contáctanos</a>
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-slide"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/lugagge-7.webp') no-repeat center center/cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <h2>Otro mensaje</h2>
+            <a href="#about" class="btn">Saber más</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-slide"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/lugagge-5.jpeg') no-repeat center center/cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <h2>Más contenido</h2>
+            <a href="#servicios" class="btn">Ver servicios</a>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div
+          class="carousel-slide"
+          style="
+            background: linear-gradient(
+                rgba(44, 44, 44, 0.4),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('../public/lugagge-1.jpg') no-repeat center center/cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <h2>Última frase</h2>
+            <a href="#galeria" class="btn">Galería</a>
+          </div>
+        </div>
+
+        <div class="carousel-dots"></div>
       </section>
 
       <!-- Content Section -->
       <section class="page-content">
         <div class="container">
-          <a href="index.html" class="back-link">← Volver al inicio</a>
-
           <div class="content-grid">
             <div class="content-main">
-              <h2 class="content-title">¿Qué incluye nuestra sala privada?</h2>
+              <h2 class="content-title">
+                ¿Por qué usar nuestro servicio de guardado?
+              </h2>
               <p class="content-text">
-                Nuestras salas privadas están diseñadas para equipos y empresas
-                que necesitan un espacio exclusivo y profesional. Cada oficina
-                está completamente equipada y ofrece la privacidad que tu
-                negocio requiere.
+                Nuestro servicio de luggage storage está diseñado para viajeros,
+                nómadas digitales y profesionales que necesitan un lugar seguro
+                donde dejar sus pertenencias mientras trabajan o exploran San
+                Martín de los Andes.
               </p>
               <p class="content-text">
-                Ubicadas en un entorno inspirador con vistas panorámicas de San
-                Martín de los Andes, estas oficinas combinan funcionalidad,
-                comodidad y un ambiente que potencia la creatividad y
-                productividad de tu equipo.
+                Ubicado en el centro de la ciudad, ofrecemos casilleros seguros
+                y un sistema de vigilancia 24/7 para que puedas disfrutar de tu
+                tiempo sin preocupaciones, sabiendo que tus pertenencias están
+                protegidas.
               </p>
               <p class="content-text">
-                Ideales para startups en crecimiento, equipos de consultores,
-                agencias creativas, y cualquier empresa que valore un espacio de
-                trabajo exclusivo en un destino único.
+                Perfecto para turistas que llegan temprano o se van tarde,
+                trabajadores remotos que no quieren cargar con equipaje pesado,
+                y cualquier persona que valore la comodidad y seguridad.
               </p>
             </div>
 
             <div class="features-card">
-              <h3 class="features-title">Características incluidas</h3>
+              <h3 class="features-title">¿Qué incluye el servicio?</h3>
               <ul class="features-list">
                 <li class="feature-item">
-                  <span class="feature-icon">🏢</span>
-                  <span>Oficina completamente privada y equipada</span>
+                  <span class="feature-icon">🔐</span>
+                  <span>Casilleros seguros con código personal</span>
                 </li>
                 <li class="feature-item">
-                  <span class="feature-icon">🪑</span>
-                  <span>Mobiliario ergonómico y profesional</span>
+                  <span class="feature-icon">📹</span>
+                  <span>Sistema de vigilancia 24/7</span>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-icon">🏷️</span>
+                  <span>Etiquetado y registro de pertenencias</span>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-icon">⏰</span>
+                  <span>Acceso flexible según necesidades</span>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-icon">🛡️</span>
+                  <span>Seguro incluido hasta $50.000</span>
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon">📱</span>
-                  <span>Línea telefónica dedicada</span>
-                </li>
-                <li class="feature-item">
-                  <span class="feature-icon">🔒</span>
-                  <span>Acceso 24/7 con sistema de seguridad</span>
-                </li>
-                <li class="feature-item">
-                  <span class="feature-icon">🖨️</span>
-                  <span>Impresora y scanner de uso exclusivo</span>
-                </li>
-                <li class="feature-item">
-                  <span class="feature-icon">🌟</span>
-                  <span>Servicio de limpieza diario incluido</span>
+                  <span>Notificaciones por WhatsApp</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Pricing Section -->
-          <div class="pricing-section">
-            <h3 class="pricing-title">Planes para Sala Privada</h3>
-            <div class="pricing-grid">
-              <div class="pricing-card">
-                <h4 class="pricing-plan">Sala Pequeña</h4>
-                <p class="pricing-price">$85.000</p>
-                <p class="pricing-period">Por mes - Hasta 4 personas</p>
-                <p class="pricing-includes">
-                  Incluye todos los servicios básicos
+          <!-- Additional Info -->
+          <div class="info-section">
+            <h3 class="info-title">Información importante</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <h4 class="info-item-title">¿Qué puedo guardar?</h4>
+                <p class="info-text">
+                  Maletas, mochilas, equipos de trabajo, equipos deportivos,
+                  souvenirs y cualquier pertenencia personal no peligrosa.
                 </p>
               </div>
-              <div class="pricing-card featured">
-                <h4 class="pricing-plan">Sala Mediana</h4>
-                <p class="pricing-price">$120.000</p>
-                <p class="pricing-period">Por mes - Hasta 8 personas</p>
-                <p class="pricing-includes">
-                  Incluye sala de reuniones 10 hs/mes
+              <div class="info-item">
+                <h4 class="info-item-title">¿Qué NO se puede guardar?</h4>
+                <p class="info-text">
+                  Alimentos perecederos, líquidos, sustancias peligrosas,
+                  documentos de valor extremo, medicamentos controlados.
                 </p>
               </div>
-              <div class="pricing-card">
-                <h4 class="pricing-plan">Sala Grande</h4>
-                <p class="pricing-price">$180.000</p>
-                <p class="pricing-period">Por mes - Hasta 12 personas</p>
-                <p class="pricing-includes">
-                  Incluye sala de reuniones ilimitada
+              <div class="info-item">
+                <h4 class="info-item-title">Horarios de acceso</h4>
+                <p class="info-text">
+                  Lunes a domingo de 7:00 a 22:00 hs. Para acceso fuera de
+                  horario, consultar disponibilidad.
+                </p>
+              </div>
+              <div class="info-item">
+                <h4 class="info-item-title">Ubicación</h4>
+                <p class="info-text">
+                  Centro de San Martín de los Andes, a 2 cuadras del terminal de
+                  ómnibus y 5 cuadras del lago.
                 </p>
               </div>
             </div>
@@ -136,25 +182,23 @@
 
           <!-- CTA Section -->
           <div class="page-cta">
-            <h3 class="cta-title">
-              ¿Tu equipo necesita privacidad y profesionalismo?
-            </h3>
+            <h3 class="cta-title">¿Necesitas guardar tus pertenencias?</h3>
             <p class="cta-description">
-              Descubre cómo una sala privada puede transformar la dinámica de
-              trabajo de tu equipo en un entorno único e inspirador.
+              Reserva tu casillero ahora y disfruta de San Martín de los Andes
+              sin cargas. Servicio seguro, confiable y conveniente.
             </p>
             <div class="cta-buttons">
               <button
                 class="cta-button primary"
                 onclick="alert('Funcionalidad de reserva próximamente')"
               >
-                Reservar sala
+                Reservar casillero
               </button>
               <button
                 class="cta-button secondary"
-                onclick="alert('Contacta con nosotros para agendar una visita')"
+                onclick="alert('Contacta con nosotros para más información')"
               >
-                Agendar visita
+                Consultar disponibilidad
               </button>
             </div>
           </div>
@@ -177,51 +221,7 @@
       </svg>
     </a>
 
-    <footer class="footer">
-      <div class="footer-pattern"></div>
-      <div class="container">
-        <div class="footer-content">
-          <!-- Logo + Nombre + Frase -->
-          <div class="footer-section footer-brand">
-            <img src="./public/logo.png" alt="Logo" class="footer-logo" />
-            <h4 class="footer-title">Coworking San Martín</h4>
-            <p class="footer-text">
-              Tu espacio de trabajo en el corazón de la Patagonia
-            </p>
-          </div>
-
-          <!-- Contacto -->
-          <div class="footer-section">
-            <h4 class="footer-title">Contacto</h4>
-            <p class="footer-text">San Martín de los Andes, Neuquén</p>
-            <p class="footer-text">+54 2972 123456</p>
-            <p class="footer-text">hola@coworkingsanmartin.com</p>
-          </div>
-
-          <!-- Redes sociales -->
-          <div class="footer-section">
-            <h4 class="footer-title">Síguenos</h4>
-            <div class="social-links">
-              <a href="#" class="social-link"
-                ><i data-lucide="facebook"></i> Facebook</a
-              >
-              <a href="#" class="social-link"
-                ><i data-lucide="instagram"></i> Instagram</a
-              >
-              <a href="#" class="social-link"
-                ><i data-lucide="linkedin"></i> LinkedIn</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
-    </footer>
-    <script src="script.js"></script>
+    <div id="footer-container"></div>
+    <script type="module" src="../script/app.js"></script>
   </body>
 </html>

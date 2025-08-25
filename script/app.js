@@ -1,44 +1,28 @@
-// Navbar (siempre presente)
-const navbar = document.getElementById("navbar");
-const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menu");
-const overlay = document.getElementById("overlay");
+import { initNavbar } from "../modules/navBar/app.js";
+const slides = document.querySelectorAll(".carousel-slide");
+const dotsContainer = document.querySelector(".carousel-dots");
 
-// Scroll effect
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
+async function loadModule(containerId, modulePath, initFn) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  try {
+    const response = await fetch(modulePath);
+    const html = await response.text();
+    container.innerHTML = html;
+
+    if (typeof initFn === "function") {
+      initFn(container);
+    }
+  } catch (err) {
+    console.error("Error cargando módulo:", err);
   }
-});
-function toggleMenu() {
-  if (menu && overlay && hamburger) {
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
-    hamburger.classList.toggle("active");
-  }
+  lucide.createIcons();
 }
 
-// Función cerrar
-function closeMenu() {
-  if (menu && overlay && hamburger) {
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-    hamburger.classList.remove("active");
-  }
-}
-
-// Abrir/cerrar con el botón hamburguesa
-if (hamburger) hamburger.addEventListener("click", toggleMenu);
-
-// Cerrar si se hace click en overlay
-if (overlay) overlay.addEventListener("click", closeMenu);
-
-// Cerrar si se hace click en un link
-document.querySelectorAll(".menu a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
+// Cargar el navbar en todas las páginas
+loadModule("navbar-container", "../modules/navbar/index.html", initNavbar);
+loadModule("footer-container", "../modules/footer/index.html");
 
 // Details toggle (solo si existen)
 const allDetails = document.querySelectorAll(".custom-details");
@@ -112,52 +96,6 @@ function initSmoothScrolling() {
   });
 }
 
-// Loading animation (si quieres mantenerlo)
-function showLoading() {
-  const loader = document.createElement("div");
-  loader.id = "page-loader";
-  loader.innerHTML = `
-    <div style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: hsl(35, 25%, 97%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    ">
-      <div style="
-        width: 50px;
-        height: 50px;
-        border: 3px solid hsl(30, 15%, 88%);
-        border-top: 3px solid hsl(25, 35%, 25%);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      "></div>
-    </div>
-    <style>
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    </style>
-  `;
-  document.body.appendChild(loader);
-
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      loader.style.opacity = "0";
-      setTimeout(() => {
-        if (loader.parentNode) loader.parentNode.removeChild(loader);
-      }, 500);
-    }, 300);
-  });
-}
-
 // Hover effects (si existen)
 function initHoverEffects() {
   const buttons = document.querySelectorAll(
@@ -173,70 +111,46 @@ function initHoverEffects() {
   });
 }
 
-// Form validation (si existe el formulario)
-function initFormValidation() {
-  const form = document.querySelector(".contact-form");
-  if (!form) return;
-
-  const inputs = form.querySelectorAll("input, textarea");
-  inputs.forEach((input) => {
-    input.addEventListener("blur", () => validateField(input));
-    input.addEventListener("input", () => clearValidationError(input));
-  });
-}
-
-// Utilities
-function validateField(field) {
-  const value = field.value.trim();
-  let isValid = true;
-  let errorMessage = "";
-
-  clearValidationError(field);
-
-  if (field.hasAttribute("required") && !value) {
-    isValid = false;
-    errorMessage = "Este campo es obligatorio";
-  } else if (
-    field.type === "email" &&
-    value &&
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-  ) {
-    isValid = false;
-    errorMessage = "Por favor ingresa un email válido";
-  }
-
-  if (!isValid) showValidationError(field, errorMessage);
-
-  return isValid;
-}
-
-function showValidationError(field, message) {
-  field.style.borderColor = "hsl(0, 65%, 55%)";
-  const errorDiv = document.createElement("div");
-  errorDiv.className = "field-error";
-  errorDiv.style.cssText =
-    "color: hsl(0, 65%, 55%); font-size: 0.875rem; margin-top: 0.25rem;";
-  errorDiv.textContent = message;
-  field.parentNode.appendChild(errorDiv);
-}
-
-function clearValidationError(field) {
-  field.style.borderColor = "hsl(30, 15%, 88%)";
-  const errorDiv = field.parentNode.querySelector(".field-error");
-  if (errorDiv) errorDiv.remove();
-}
-
 // DOMContentLoaded init
 document.addEventListener("DOMContentLoaded", () => {
-  showLoading();
   initScrollAnimations();
   initSmoothScrolling();
   initHoverEffects();
-  initFormValidation();
-  console.log("Coworking San Martín website initialized successfully!");
 });
 
-// Export functions
-window.navigateTo = navigateTo;
-window.scrollToSection = scrollToSection;
+if (slides.length && dotsContainer) {
+  let currentIndex = 0;
+  let interval;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goToSlide(index) {
+    slides[currentIndex].classList.remove("active");
+    dotsContainer.children[currentIndex].classList.remove("active");
+
+    currentIndex = index;
+
+    slides[currentIndex].classList.add("active");
+    dotsContainer.children[currentIndex].classList.add("active");
+
+    resetInterval();
+  }
+
+  function nextSlide() {
+    const newIndex = (currentIndex + 1) % slides.length;
+    goToSlide(newIndex);
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 6000);
+  }
+
+  resetInterval();
+}
 window.handleSubmit = handleSubmit;
