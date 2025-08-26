@@ -5,25 +5,6 @@ import { initFooter } from "../modules/footer/app.js";
 const slides = document.querySelectorAll(".carousel-slide");
 const dotsContainer = document.querySelector(".carousel-dots");
 
-// Función loadModule para otros módulos (footer, etc.)
-async function loadModule(containerId, modulePath, initFn) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-
-  try {
-    const response = await fetch(modulePath);
-    const html = await response.text();
-    container.innerHTML = html;
-
-    if (typeof initFn === "function") {
-      initFn(container);
-    }
-  } catch (err) {
-    console.error("Error cargando módulo:", err);
-  }
-  lucide.createIcons();
-}
-
 // CAMBIO: Usar el nuevo sistema para navbar y footer
 function initModules() {
   // Inicializar navbar con el nuevo sistema
@@ -37,6 +18,8 @@ function initModules() {
   if (footerContainer) {
     initFooter(footerContainer);
   }
+
+  lucide.createIcons();
 }
 
 // Details toggle (solo si existen)
