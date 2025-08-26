@@ -21,7 +21,34 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <div id="navbar-container"></div>
+    <header>
+      <nav id="navbar">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="../public/logo-bg.png"
+              class="logo-image"
+              alt="ave volando con montaña atras"
+          /></a>
+
+          <h3 class="merriweather-family">VULTUR</h3>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#hero">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+    </header>
     <main>
       <section class="hero-section" id="hero">
         <div class="hero-overlay"></div>
@@ -208,7 +235,27 @@
 
           <div class="contact-form-wrapper">
             <form class="contact-form">
-              <input type="text" name="name" placeholder="Tu nombre" required />
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+              <input
+                type="tel"
+                name="telefono"
+                placeholder="Tu telefono"
+                required
+              />
+              <select id="service" name="service" required>
+                <option value="" disabled selected>
+                  -- Motivo de tu consulta --
+                </option>
+                <option value="cowork">Espacio de Coworking</option>
+                <option value="privada">Sala Privada</option>
+                <option value="storage">Luggage Storage</option>
+                <option value="otro">Otros</option>
+              </select>
               <textarea
                 name="message"
                 placeholder="Escribinos tu mensaje..."
@@ -235,7 +282,62 @@
         />
       </svg>
     </a>
-    <div id="footer-container"></div>
+    <footer class="footer">
+      <div class="footer-pattern"></div>
+      <div class="container">
+        <div class="footer-content">
+          <!-- Logo + Nombre + Frase -->
+          <div class="footer-section footer-brand">
+            <img src="../public/logo-bg.png" alt="Logo" class="footer-logo" />
+            <h4 class="footer-title merriweather-family">VULTUR cowork</h4>
+            <p class="footer-text">Donde tus ideas cobran vuelo</p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-title">Contacto</h4>
+            <address class="footer-text">
+              <i data-lucide="map-pin"></i>
+              Belgrano 845. San Martín de los Andes
+            </address>
+            <a href="tel:2972529892" class="footer-text">
+              <i data-lucide="phone"></i>
+              +54 2972529892
+            </a>
+            <a href="mailto:info@vulturcowork.com.ar" class="footer-text">
+              <i data-lucide="mail"></i>
+              info@vulturcowork.com
+            </a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-section">
+            <h4 class="footer-title">Síguenos</h4>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/vultur.cowork/"
+                target="_blank"
+                class="social-link"
+              >
+                <i data-lucide="instagram"></i> Instagram
+              </a>
+              <a
+                href="https://linktr.ee/vultur.cowork"
+                target="_blank"
+                class="social-link"
+              >
+                <i data-lucide="link"></i> Linktree
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="./script/app.js"></script>
     <script>

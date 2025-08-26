@@ -1,26 +1,49 @@
-// CAMBIO: Importar los nuevos módulos
-import { initNavbar } from "../modules/navbar/app.js";
-import { initFooter } from "../modules/footer/app.js";
-
 const slides = document.querySelectorAll(".carousel-slide");
 const dotsContainer = document.querySelector(".carousel-dots");
+const navbar = document.querySelector("#navbar");
+const hamburger = document.querySelector("#hamburger");
+const menu = document.querySelector("#menu");
+const overlay = document.querySelector("#overlay");
+const links = document.querySelectorAll(".menu a");
 
-// CAMBIO: Usar el nuevo sistema para navbar y footer
-function initModules() {
-  // Inicializar navbar con el nuevo sistema
-  const navContainer = document.getElementById("navbar-container");
-  if (navContainer) {
-    initNavbar(navContainer);
-  }
+// Efecto scroll (el nav está en todas)
+window.addEventListener(
+  "scroll",
+  () => {
+    if (window.scrollY > 50) navbar?.classList.add("scrolled");
+    else navbar?.classList.remove("scrolled");
+  },
+  { passive: true }
+);
 
-  // Inicializar footer con el nuevo sistema
-  const footerContainer = document.getElementById("footer-container");
-  if (footerContainer) {
-    initFooter(footerContainer);
-  }
-
-  lucide.createIcons();
+function lockBodyScroll(lock) {
+  document.body.classList.toggle("no-scroll", !!lock);
 }
+
+function toggleMenu() {
+  if (!menu || !overlay || !hamburger) return;
+  const willOpen = !menu.classList.contains("active");
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+  hamburger.classList.toggle("active");
+  lockBodyScroll(willOpen);
+}
+
+function closeMenu() {
+  if (!menu || !overlay || !hamburger) return;
+  menu.classList.remove("active");
+  overlay.classList.remove("active");
+  hamburger.classList.remove("active");
+  lockBodyScroll(false);
+}
+
+hamburger?.addEventListener("click", toggleMenu);
+overlay?.addEventListener("click", closeMenu);
+links.forEach((link) => link.addEventListener("click", closeMenu));
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
 
 // Details toggle (solo si existen)
 const allDetails = document.querySelectorAll(".custom-details");

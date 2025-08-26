@@ -1164,6 +1164,7 @@ html {
 
   .cta-buttons {
     flex-direction: column;
+    margin-bottom: 15px;
   }
 
   .page-hero-title {

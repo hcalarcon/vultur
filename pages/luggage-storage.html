@@ -9,9 +9,38 @@
       content="Oficinas privadas completamente equipadas en San Martín de los Andes. Privacidad total para tu equipo de trabajo."
     />
     <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <div id="navbar-container"></div>
+    <header>
+      <nav id="navbar">
+        <div class="logo">
+          <a href="/index.html">
+            <img
+              src="../public/logo-bg.png"
+              class="logo-image"
+              alt="ave volando con montaña atras"
+          /></a>
+
+          <h3 class="merriweather-family">VULTUR</h3>
+        </div>
+        <div class="menu" id="menu">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/index.html#nosotros">Nosotros</a>
+          <a href="/index.html#servicios">Servicios</a>
+          <a href="/index.html#contacto">Contacto</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+    </header>
     <main>
       <!-- Hero Section -->
       <section class="hero-carousel">
@@ -188,16 +217,7 @@
               sin cargas. Servicio seguro, confiable y conveniente.
             </p>
             <div class="cta-buttons">
-              <button
-                class="cta-button primary"
-                onclick="alert('Funcionalidad de reserva próximamente')"
-              >
-                Reservar casillero
-              </button>
-              <button
-                class="cta-button secondary"
-                onclick="alert('Contacta con nosotros para más información')"
-              >
+              <button class="cta-button primary">
                 Consultar disponibilidad
               </button>
             </div>
@@ -221,21 +241,67 @@
       </svg>
     </a>
 
-    <div id="footer-container"></div>
+    <footer class="footer">
+      <div class="footer-pattern"></div>
+      <div class="container">
+        <div class="footer-content">
+          <!-- Logo + Nombre + Frase -->
+          <div class="footer-section footer-brand">
+            <img src="../public/logo-bg.png" alt="Logo" class="footer-logo" />
+            <h4 class="footer-title merriweather-family">VULTUR cowork</h4>
+            <p class="footer-text">Donde tus ideas cobran vuelo</p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-title">Contacto</h4>
+            <address class="footer-text">
+              <i data-lucide="map-pin"></i>
+              Belgrano 845. San Martín de los Andes
+            </address>
+            <a href="tel:2972529892" class="footer-text">
+              <i data-lucide="phone"></i>
+              +54 2972529892
+            </a>
+            <a href="mailto:info@vulturcowork.com.ar" class="footer-text">
+              <i data-lucide="mail"></i>
+              info@vulturcowork.com
+            </a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-section">
+            <h4 class="footer-title">Síguenos</h4>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/vultur.cowork/"
+                target="_blank"
+                class="social-link"
+              >
+                <i data-lucide="instagram"></i> Instagram
+              </a>
+              <a
+                href="https://linktr.ee/vultur.cowork"
+                target="_blank"
+                class="social-link"
+              >
+                <i data-lucide="link"></i> Linktree
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Coworking San Martín. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="../script/app.js"></script>
 
     <script>
-      function openModal(img) {
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        modal.style.display = "flex";
-        modalImg.src = img.src;
-      }
-
-      function closeModal() {
-        const modal = document.getElementById("modal");
-        modal.style.display = "none";
-      }
+      lucide.createIcons();
     </script>
   </body>
 </html>
