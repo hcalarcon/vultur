@@ -157,12 +157,7 @@
               trabajar en un entorno inspirador puede transformar tu día a día.
             </p>
             <div class="cta-buttons">
-              <button
-                class="cta-button primary"
-                onclick="alert('Funcionalidad de reserva próximamente')"
-              >
-                Consulta ahora
-              </button>
+              <button class="cta-button primary">Consulta ahora</button>
             </div>
           </div>
           <section class="gallery-section">
@@ -170,29 +165,29 @@
 
             <div class="gallery-grid">
               <img
-                src="/public/privada-1.jpg"
+                src="../public/cowork-1.jpg"
                 alt="Imagen 1"
                 onclick="openModal(this)"
               />
               <img
-                src="/public/privada-2.jpg"
+                src="../public/cowork-3.jpeg"
                 alt="Imagen 2"
                 onclick="openModal(this)"
               />
               <img
-                src="/public/privada-3.jpg"
+                src="../public/flores.jpeg"
                 alt="Imagen 3"
                 onclick="openModal(this)"
               />
-              <img src="/public/privada-4.jpeg" alt="Imagen 4" rid-area: 2 / 1 /
-              3 / 2; " onclick="openModal(this)" />
+              <img src="../public/cowork.jpg" alt="Imagen 4" rid-area: 2 / 1 / 3
+              / 2; " onclick="openModal(this)" />
               <img
-                src="/public/privada-5.jpeg"
+                src="../public/privada-5.jpeg"
                 alt="Imagen 5"
                 onclick="openModal(this)"
               />
               <img
-                src="/public/privada-6.jpeg"
+                src="../public/privada-6.jpeg"
                 alt="Imagen 6"
                 onclick="openModal(this)"
               />
@@ -247,5 +242,19 @@
     <div id="footer-container"></div>
 
     <script type="module" src="../script/app.js"></script>
+
+    <script>
+      function openModal(img) {
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+      }
+    </script>
   </body>
 </html>
