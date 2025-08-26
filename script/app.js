@@ -134,9 +134,6 @@ function initHoverEffects() {
 
 // CAMBIO: DOMContentLoaded init actualizado
 document.addEventListener("DOMContentLoaded", () => {
-  // Inicializar módulos primero
-  initModules();
-
   // Luego el resto de funcionalidades
   initScrollAnimations();
   initSmoothScrolling();

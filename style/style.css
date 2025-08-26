@@ -473,7 +473,7 @@ nav.scrolled {
 .location-section {
   position: relative;
   width: 100%;
-  height: 500px;
+  margin-bottom: 20px;
 }
 
 .map-container {
@@ -824,6 +824,7 @@ nav.scrolled {
 }
 
 .content-title {
+  margin-top: var(--spacing-8);
   font-size: var(--font-size-3xl);
   font-weight: 700;
   color: var(--color-primary);
@@ -1184,6 +1185,16 @@ html {
     text-align: center;
   }
 
+  .location-card .btn-location,
+  .location-card h2,
+  .location-card span {
+    display: none;
+  }
+
+  .map-container {
+    height: 100%;
+  }
+
   .contact-cards {
     flex-direction: row;
     flex-wrap: nowrap; /* que estén en fila */
@@ -1253,7 +1264,6 @@ html {
   padding: 15px;
   grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
   gap: 2rem; /* Espacio entre columnas */
-  height: 500px; /* altura del grid, podés ajustar */
 }
 
 .resena-container,
